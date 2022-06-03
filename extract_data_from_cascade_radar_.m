@@ -91,8 +91,8 @@ for frame_index    = n:nframe
 B = zeros(128,128);
     for i=1:128
     for k=1:128 
-        azimuth = 0.4+i*1.05*2*pi/360;
-        r = 0.117*k;
+        azimuth = 0.4+i*1.05*2*pi/360; % 0.4 radian = 22.5° is offset to center the y axis || 1.05 is Azimuth resolution
+        r = 0.117*k; % 0.117 is Range resolution
    [x,y,z] = sph2cart(azimuth,0,r);
    x=64+round(64*x/15);
    y=1+round(127*y/15);
